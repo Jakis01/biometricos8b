@@ -37,15 +37,15 @@ fun RegistrarTareaActivity(tareaId: String? = null, onNavigateBack: () -> Unit) 
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    // 1. Definición de colores de marca
+
     val brandBlue = Color(0xFF002868)
     val brandPurple = Color(0xFF8B80F8)
 
-    // 2. Opciones para los selectores (Definidas correctamente en el scope del Composable)
+
     val opcionesCategoria = listOf("Trabajo", "Estudio", "Hogar", "Personal")
     val opcionesPrioridad = listOf("Alta", "Media", "Baja")
 
-    // 3. Configuración del Reconocedor de Voz Directo (Evita el error de los 16 bits)
+
     val speechRecognizer = remember { SpeechRecognizer.createSpeechRecognizer(context) }
     var isListening by remember { mutableStateOf(false) }
 
@@ -76,7 +76,7 @@ fun RegistrarTareaActivity(tareaId: String? = null, onNavigateBack: () -> Unit) 
         onDispose { speechRecognizer.destroy() }
     }
 
-    // 4. Estados del formulario
+
     var categoria by remember { mutableStateOf("Trabajo") }
     var prioridad by remember { mutableStateOf("Media") }
     var completada by remember { mutableStateOf(false) }

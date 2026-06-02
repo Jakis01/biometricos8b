@@ -24,7 +24,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import com.example.biometricos8b.R
 
-// Función auxiliar para encontrar la actividad de forma segura
+
 fun Context.getActivity(): FragmentActivity? = when (this) {
     is FragmentActivity -> this
     is ContextWrapper -> baseContext.getActivity()

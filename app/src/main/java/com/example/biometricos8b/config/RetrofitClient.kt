@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    // Restaurada tu IP original para que el backend funcione de nuevo
+
     private const val BASE_URL = "https://tareas-backend-qlpc.onrender.com/"
 
     private val gson = GsonBuilder()

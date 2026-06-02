@@ -83,7 +83,7 @@ fun HomeActivity(
                 }
             }
 
-            // --- CUERPO DEL DASHBOARD ---
+            // --- DASHBOARD ---
             Column(
                 modifier = Modifier
                     .fillMaxSize()

@@ -42,7 +42,7 @@ fun RegistrarNotaActivity(notaId: String? = null, onNavigateBack: () -> Unit) {
     val brandBlue = Color(0xFF002868)
     val brandPurple = Color(0xFF8B80F8)
 
-    // Configuración del Reconocedor de Voz Directo
+    // Reconocimiento de Voz
     val speechRecognizer = remember { SpeechRecognizer.createSpeechRecognizer(context) }
     var isListening by remember { mutableStateOf(false) }
 
@@ -61,7 +61,7 @@ fun RegistrarNotaActivity(notaId: String? = null, onNavigateBack: () -> Unit) {
                 val matches = results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
                 if (!matches.isNullOrEmpty()) {
                     val nuevoTexto = matches[0]
-                    // Añadimos el texto al final para no borrar lo anterior
+
                     contenido = if (contenido.isBlank()) nuevoTexto else "$contenido $nuevoTexto"
                 }
             }
