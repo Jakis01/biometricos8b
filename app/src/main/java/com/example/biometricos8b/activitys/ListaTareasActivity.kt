@@ -169,7 +169,7 @@ fun TareaCard(tarea: Tarea, onEdit: () -> Unit, onDelete: () -> Unit, onComplete
                 }
                 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    // El icono de completado ahora está al lado del lapicito
+
                     IconButton(onClick = onComplete) {
                         Icon(
                             imageVector = if (tarea.completada) Icons.Default.CheckCircle else Icons.Default.RadioButtonChecked,
